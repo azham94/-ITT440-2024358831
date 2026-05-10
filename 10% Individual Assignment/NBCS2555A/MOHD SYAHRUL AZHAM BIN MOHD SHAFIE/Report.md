@@ -23,10 +23,10 @@ The main objectives of this study are:<br />
     •	Grafana k6 <img width="89" height="73" alt="image" src="https://github.com/user-attachments/assets/6d7a3690-354e-4113-95aa-5d0e5dc21015" />
 
 <br />
-**2.2 Target API**
+2.2 Target API
     •	https://api.open-meteo.com/v1/forecast
 <br />
-**2.3 Testing Approach**
+2.3 Testing Approach
 <br />
 This project implements three types of performance tests:
 <br />

@@ -9,7 +9,7 @@
 **Lecturer:** Sir Shahadan Bin Saad  
 
 
-**1. Introduction**<br />
+# 1. Introduction<br />
 Performance testing is a critical aspect of evaluating the scalability, responsiveness, and stability of modern web services. APIs (Application Programming Interfaces) are widely used to deliver data efficiently, making their performance under concurrent load an important area of study.
 This project focuses on analyzing the performance of a public weather API, specifically the Open-Meteo API. Unlike conventional testing approaches that rely on static requests, this study incorporates dynamic request parameters to better simulate real-world user behavior.
 The main objectives of this study are:<br />
@@ -17,9 +17,9 @@ The main objectives of this study are:<br />
 •	To analyze system behavior under sudden traffic spikes <br />
 •	To assess long-term stability through endurance testing <br />
 <br />
-**2. Methodology**
+# 2. Methodology
 <br />
-**2.1 Tools Used**<br />
+2.1 Tools Used<br />
     •	Grafana k6 <img width="89" height="73" alt="image" src="https://github.com/user-attachments/assets/6d7a3690-354e-4113-95aa-5d0e5dc21015" />
 
 <br />
@@ -36,9 +36,6 @@ This project implements three types of performance tests:
 | Load Test (Ramp-Up)	| Gradual increase in users |
 | Burst Spike Test | Sudden increase in traffic |
 | Endurance Soak Test	| Long-duration stability test |
-
-<br />
-<br />
 <br />
 2.4 Dynamic Request Design
 <br />
@@ -50,7 +47,7 @@ This project implements three types of performance tests:
   This ensures that each request interacts with different data, mimicking real-world user scenarios.
 <br />
 <br />
-3. Test Design & Coding
+# 3. Test Design & Coding
 <br />
    3.1 Load Test (Ramp-Up)
 <br />
@@ -82,7 +79,6 @@ This project implements three types of performance tests:
     }
 <br />
 <br />
-<br />
 3.2 Burst Spike Test
 <br />
 •	Sudden jump from 10 to 200 users 
@@ -106,7 +102,6 @@ This project implements three types of performance tests:
     }
 <br />
 <br />
-<br />
 3.3 Endurance Soak Test
 <br />
 •	50 users for 5 minutes 
@@ -127,8 +122,7 @@ This project implements three types of performance tests:
     }
 <br />
 <br />
-<br />
-4. Results
+# 4. Results
 <br />   
   4.1 Ramp-Up Load Test Result
 <br />
@@ -150,7 +144,6 @@ This project implements three types of performance tests:
 
 <br />
 <br />
-<br />
   4.2 Burst Spike Test Result
 <br />
   •	Average Response Time: 233.17 ms 
@@ -169,11 +162,9 @@ This project implements three types of performance tests:
   <br />
 <br />
 <img width="975" height="686" alt="image" src="https://github.com/user-attachments/assets/419ec2ee-53f1-4ad5-8fa1-d99061117cc8" />
-
 <br />
 <br />
-<br />
-  4.3 Endurance Soak Test Result
+4.3 Endurance Soak Test Result
 <br />
   •	Average Response Time: 219.41 ms 
 <br />
@@ -190,15 +181,14 @@ This project implements three types of performance tests:
   •	Error Rate: 72.92% (8936 failed requests) 
 
 <img width="975" height="658" alt="image" src="https://github.com/user-attachments/assets/ac839b72-a9b1-4b0d-81f2-a22c4a3e4b0a" />
+<br />
+<br />
 
-<br />
-<br />
-<br />
-5. Discussion
-   
-  The performance evaluation of the Open-Meteo API under dynamic request conditions reveals several critical insights regarding system behavior under varying load scenarios.
-  During the ramp-up load test, the system demonstrated moderate performance with an average response time of approximately 401 ms. However, the relatively high error rate of 48.51% indicates that even under gradually increasing load, the API begins to experience instability. This suggests that the system has limited scalability and struggles to maintain consistent performance as the number of concurrent users increases.
-  In the spike test, the system exhibited a more severe degradation in reliability. Although the average response time appeared lower at 233 ms, this metric alone does not reflect the true system performance. The error rate significantly increased to 64.65%, indicating that the majority of requests were unsuccessful during the sudden surge in traffic. This highlights the system’s inability to handle abrupt increases in load, likely due to server-side limitations such as rate limiting, request throttling, or insufficient resource allocation.
-  The soak test further exposed the system’s limitations under prolonged usage. While the average response time remained relatively stable at 219 ms, the maximum response time reached 12.77 seconds, indicating severe latency spikes over time. More importantly, the error rate escalated to 72.92%, demonstrating a critical failure in maintaining reliability under sustained load conditions. This behavior suggests possible resource exhaustion, connection saturation, or backend processing inefficiencies.
-  A key strength of this study is the implementation of dynamic request parameters. By varying latitude and longitude values in each request, the test effectively simulates real-world user behavior. However, this also increases processing complexity on the server side, which may contribute to the high failure rates observed across all test scenarios.
-  Overall, the results indicate that while the API is capable of handling low to moderate traffic, it fails to scale effectively under both sudden spikes and prolonged load. The consistently high error rates across all test scenarios highlight a significant performance bottleneck, particularly in terms of reliability and scalability.
+#  5. Discussion
+
+The performance evaluation of the Open-Meteo API under dynamic request conditions reveals several critical insights regarding system behavior under varying load scenarios.
+During the ramp-up load test, the system demonstrated moderate performance with an average response time of approximately 401 ms. However, the relatively high error rate of 48.51% indicates that even under gradually increasing load, the API begins to experience instability. This suggests that the system has limited scalability and struggles to maintain consistent performance as the number of concurrent users increases.
+In the spike test, the system exhibited a more severe degradation in reliability. Although the average response time appeared lower at 233 ms, this metric alone does not reflect the true system performance. The error rate significantly increased to 64.65%, indicating that the majority of requests were unsuccessful during the sudden surge in traffic. This highlights the system’s inability to handle abrupt increases in load, likely due to server-side limitations such as rate limiting, request throttling, or insufficient resource allocation.
+The soak test further exposed the system’s limitations under prolonged usage. While the average response time remained relatively stable at 219 ms, the maximum response time reached 12.77 seconds, indicating severe latency spikes over time. More importantly, the error rate escalated to 72.92%, demonstrating a critical failure in maintaining reliability under sustained load conditions. This behavior suggests possible resource exhaustion, connection saturation, or backend processing inefficiencies.
+A key strength of this study is the implementation of dynamic request parameters. By varying latitude and longitude values in each request, the test effectively simulates real-world user behavior. However, this also increases processing complexity on the server side, which may contribute to the high failure rates observed across all test scenarios.
+Overall, the results indicate that while the API is capable of handling low to moderate traffic, it fails to scale effectively under both sudden spikes and prolonged load. The consistently high error rates across all test scenarios highlight a significant performance bottleneck, particularly in terms of reliability and scalability.

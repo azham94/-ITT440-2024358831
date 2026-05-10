@@ -9,7 +9,7 @@
 **Lecturer:** Sir Shahadan Bin Saad  
 
 
-**1. Introduction**
+**1. Introduction**<br />
 Performance testing is a critical aspect of evaluating the scalability, responsiveness, and stability of modern web services. APIs (Application Programming Interfaces) are widely used to deliver data efficiently, making their performance under concurrent load an important area of study.
 This project focuses on analyzing the performance of a public weather API, specifically the Open-Meteo API. Unlike conventional testing approaches that rely on static requests, this study incorporates dynamic request parameters to better simulate real-world user behavior.
 The main objectives of this study are:<br />

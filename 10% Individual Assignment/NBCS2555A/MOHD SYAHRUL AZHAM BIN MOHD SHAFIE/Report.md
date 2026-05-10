@@ -20,7 +20,8 @@ The main objectives of this study are:<br />
 **2. Methodology**
 <br />
 **2.1 Tools Used**<br />
-    •	Grafana k6 <img width="89" height="73" alt="image" src="https://github.com/user-attachments/assets/48a628e4-23c4-45b1-aae3-1bdfd09d8411" />
+    •	Grafana k6 <img width="89" height="73" alt="image" src="https://github.com/user-attachments/assets/6d7a3690-354e-4113-95aa-5d0e5dc21015" />
+
 <br />
 **2.2 Target API**
     •	https://api.open-meteo.com/v1/forecast
@@ -145,7 +146,8 @@ This project implements three types of performance tests:
 <br />
   •	Error Rate: 48.51% (1081 failed requests)
 <br />
-<img width="838" height="603" alt="image" src="https://github.com/user-attachments/assets/6809fc19-f32c-41d2-bb13-6fa467914309" />
+<img width="838" height="603" alt="image" src="https://github.com/user-attachments/assets/9cb22ce6-306f-47a2-b079-b6b7858f2089" />
+
 <br />
 <br />
 <br />
@@ -166,7 +168,8 @@ This project implements three types of performance tests:
   •	Error Rate: 64.65% (1134 failed requests)
   <br />
 <br />
-<img width="975" height="686" alt="image" src="https://github.com/user-attachments/assets/f3ad157e-3311-4b9c-9f7c-023a809be8df" />
+<img width="975" height="686" alt="image" src="https://github.com/user-attachments/assets/419ec2ee-53f1-4ad5-8fa1-d99061117cc8" />
+
 <br />
 <br />
 <br />
@@ -186,7 +189,8 @@ This project implements three types of performance tests:
 <br />
   •	Error Rate: 72.92% (8936 failed requests) 
 
-<img width="975" height="658" alt="image" src="https://github.com/user-attachments/assets/584f9894-e810-4409-8665-6a05db12fce0" />
+<img width="975" height="658" alt="image" src="https://github.com/user-attachments/assets/ac839b72-a9b1-4b0d-81f2-a22c4a3e4b0a" />
+
 <br />
 <br />
 <br />
